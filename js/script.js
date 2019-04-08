@@ -1,6 +1,3 @@
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-
 //array of quotes----------------
 let quotes = [
   {
@@ -8,12 +5,6 @@ let quotes = [
     source: "Maya Angelou",
     citation: "Still I Rise",
     year: 1978
-  },
-  {
-    quote: "I hope that the day will come in America when this business of male versus females does not become such an overriding issue, so that the talents and abilities that the almighty God have given to <em>people</em> can be utilized for the benefit of humanity.",
-    source: "Shirley Chisholm",
-    citation: "The Black Woman in Contemporary America",
-    year: 1974
   },
   {
     quote: "Success is to be measured not so much by the position that one has reached in life as by the obstacles which he has overcome while trying to succeed.",
@@ -50,42 +41,27 @@ let quotes = [
   }
 ]
 
-console.log(quotes)
+//generate random quote
+function getRandomQuote() {
+  let r = Math.floor(Math.random() * quotes.length);
+  return quotes[r];
+}
 
-
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
-
-
-
-
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
-
-
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
+//print random quote 
+function printQuote() {
+  let newQuote = getRandomQuote();
+  let quoteBox = '';
+  quoteBox += '<p class="quote">' + newQuote.quote + '</p>';
+  quoteBox += '<p class="source">' + newQuote.source;
+  if (newQuote.citation) {
+    quoteBox += '<span class="citation">' + newQuote.citation + '</span>';
+  } 
+  if (newQuote.year) {
+    quoteBox += '<span class="year">' + newQuote.year + '</span>';
+  }
+  quoteBox += '</p>';
+  document.getElementById("quote-box").innerHTML = quoteBox;
+}
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.

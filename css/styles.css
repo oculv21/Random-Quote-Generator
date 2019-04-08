@@ -6,7 +6,7 @@ body {
 
 #quote-box {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 10%;
   right: 10%;
   width: 80%;
@@ -14,7 +14,7 @@ body {
 }
 
 .quote {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.1;
   position: relative;
@@ -72,7 +72,7 @@ body {
   display: inline-block;
   left: 50%;
   margin-left: -6em;
-  bottom: 150px;
+  bottom: 110px;
   border-radius: 10px;
   border: 2px solid #fff;
   color: #fff;
