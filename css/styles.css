@@ -6,7 +6,7 @@ body {
 
 #quote-box {
   position: absolute;
-  top: 10%;
+  top: 18%;
   left: 10%;
   right: 10%;
   width: 80%;
@@ -76,12 +76,12 @@ body {
   border-radius: 10px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #8564A5;
+  background-color: rgba(255,255,255,.25);
   padding: 15px 0;
   transition: .5s ;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgb(133, 100, 165);
   transform: translateY(-10px);
 }
 
