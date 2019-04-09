@@ -48,6 +48,8 @@ function getRandomQuote() {
 }
 
 //print random quote 
+let intervalID = window.setInterval(printQuote, 8000);
+
 function printQuote() {
   let newQuote = getRandomQuote();
   let quoteBox = '';
