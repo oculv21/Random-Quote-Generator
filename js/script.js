@@ -1,5 +1,5 @@
 //array of quotes----------------
-let quotes = [
+const quotes = [
   {
     quote: "Bringing the gifts that my ancestors gave, I am the dream and the hope of the slave. I rise. I rise. I rise.",
     source: "Maya Angelou",
@@ -61,13 +61,13 @@ let quotes = [
 
 //generate random quote
 function getRandomQuote() {
-  let r = Math.floor(Math.random() * quotes.length);
+  const r = Math.floor(Math.random() * quotes.length);
   return quotes[r];
 }
 
 //print random quote 
 function printQuote() {
-  let newQuote = getRandomQuote();
+  const newQuote = getRandomQuote();
   let quoteBox = '';
   quoteBox += '<p class="quote">' + newQuote.quote + '</p>';
   quoteBox += '<p class="source">' + newQuote.source;
@@ -84,5 +84,5 @@ function printQuote() {
 }
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-let intervalID = window.setInterval(printQuote, 8000);
+const intervalID = window.setInterval(printQuote, 8000);
 
